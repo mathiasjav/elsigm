@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ElSigm - Gagne des membres avec la publicité inter-serveurs</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #000;
+      color: white;
+      position: relative;
+      overflow-x: hidden;
+    }
+    .shapes {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+    .shapes div {
+      position: absolute;
+      opacity: 0.3;
+      animation: float 20s infinite ease-in-out, move 10s infinite linear;
+    }
+    .shapes .circle {
+      width: 100px;
+      height: 100px;
+      background: red;
+      border-radius: 50%;
+      animation: moveCircle 10s infinite linear;
+    }
+    .shapes .triangle {
+      width: 0;
+      height: 0;
+      border-left: 60px solid transparent;
+      border-right: 60px solid transparent;
+      border-bottom: 100px solid white;
+      animation: moveTriangle 12s infinite linear;
+    }
+    .shapes .rectangle {
+      width: 150px;
+      height: 80px;
+      background: blue;
+      animation: moveRectangle 14s infinite linear;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+    @keyframes moveCircle {
+      0% { transform: translate(0, 0); }
+      100% { transform: translate(200px, 200px); }
+    }
+    @keyframes moveTriangle {
+      0% { transform: translate(0, 0); }
+      100% { transform: translate(-300px, 300px); }
+    }
+    @keyframes moveRectangle {
+      0% { transform: translate(0, 0); }
+      100% { transform: translate(500px, -200px); }
+    }
+    header {
+      text-align: center;
+      padding: 80px 20px 40px;
+    }
+    .bot-profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+    .bot-profile img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 4px solid white;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      margin-bottom: 15px;
+    }
+    .bot-profile h2 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    header p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: auto;
+    }
+    .cta {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 15px 30px;
+      background-color: #ffffff;
+      color: #5865f2;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+    .cta:hover {
+      background-color: #dcdcdc;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 60px 20px;
+      background: #111;
+      color: white;
+    }
+    .feature {
+      background: #222;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+    .feature h3 {
+      margin-bottom: 15px;
+      color: #4e8de3;
+    }
+    .how-it-works {
+      background: #1a1a1a;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .how-it-works h2 {
+      color: #4e8de3;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    .how-it-works p {
+      max-width: 800px;
+      margin: auto;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #111;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <div class="shapes">
+    <div class="circle" style="top: 10%; left: 5%;"></div>
+    <div class="circle" style="top: 40%; left: 70%;"></div>
+    <div class="circle" style="top: 80%; left: 40%;"></div>
+    <div class="triangle" style="top: 30%; left: 70%;"></div>
+    <div class="triangle" style="top: 60%; left: 20%;"></div>
+    <div class="rectangle" style="top: 70%; left: 40%;"></div>
+    <div class="rectangle" style="top: 20%; left: 60%;"></div>
+  </div>
+
+  <header>
+    <div class="bot-profile">
+      <img src="https://images-ext-1.discordapp.net/external/1-24xzD1Bqarat-Z-67QyWkMuWczD5JiII1RJfN5DiQ/%3Fsize%3D512/https/cdn.discordapp.com/avatars/1361056395524313158/575bbe678c001db80625835362c7ebd1.png?format=webp&quality=lossless" alt="ElSigm">
+      <h2>ElSigm</h2>
+    </div>
+    <h1>Le bot Discord pour faire grandir ton serveur</h1>
+    <p>ElSigm permet de faire la promotion de ton serveur dans un réseau de serveurs partenaires grâce à un système d’interpublicité automatisé. Gagne des membres actifs sans effort !</p>
+    <a class="cta" href="https://discord.com/oauth2/authorize?client_id=1361056395524313158&permissions=845905&integration_type=0&scope=bot">Ajouter ElSigm à mon serveur</a>
+    <a class="cta" href="https://discord.gg/aCszSWa8zd">Support</a>
+ 
+  </header>
+
+  <section class="features">
+    <div class="feature">
+      <h3>📢 InterPublicité Automatisée</h3>
+      <p>Ton serveur est mis en avant sur d'autres serveurs toutes les 2 heures.</p>
+    </div>
+    <div class="feature">
+      <h3>📊 Statistiques Complètes</h3>
+      <p>Suis les clics, vues, et nouveaux membres générés par ElSigm.</p>
+    </div>
+    <div class="feature">
+      <h3>🔒 Anti-Spam & Modération</h3>
+      <p>Des protections intégrées pour une expérience sécurisée.</p>
+    </div>
+    <div class="feature">
+      <h3>🛠️ Configuration Facile</h3>
+      <p>Utilise des commandes simples ou notre futur panneau web pour configurer ta campagne.</p>
+    </div>
+  </section>
+
+  <section class="how-it-works">
+    <h2>Comment ça fonctionne ?</h2>
+    <p>Ajoute ElSigm à ton serveur. Configure un salon avec la /config_interpub. En envoyant une publicité dans ce salon, le bot diffuse cette pub sur les autres serveurs qui utilisent ElSigm. Tu reçois aussi des pubs d'autres serveurs, créant ainsi un échange équitable et automatique qui te rapporte de vrais membres !</p>
+  </section>
+
+  <footer>
+    &copy; 2025 ElSigm. Tous droits réservés. Site créé par Eltartice.
+  </footer>
+</body>
+</html>
